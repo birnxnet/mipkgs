@@ -1,0 +1,20 @@
+{
+  "stable": {
+    "version": "2.41.1",
+    "hashes": {
+      "linux_arm64": "sha256-jN6yWqbeNDs70Bu5dTUtZzx81Dghe1QP2HDDTrQ7URA=",
+      "linux_386": "sha256-IzVxEagIoiJrbXCAcvwJhh5rjCLBgsGOdvHd6/hM/70=",
+      "linux_amd64": "sha256-8vzb3VEV3LUbY+W5nrDnk/ZqEP5sZ27BC29IAWpISsc=",
+      "apple_universal": "sha256-8UfSuRG7QvHjdEINMYbmUTzjkhna2KzB2ZzAAffcqoI="
+    }
+  },
+  "beta": {
+    "version": "2.43.0-beta.02",
+    "hashes": {
+      "linux_arm64": "sha256-rqvDCUCsYz6T6pA5cxCrjO58y5Shyhec/ouQDROBt+A=",
+      "linux_386": "sha256-37EEUGMmf3V2VGcmEAZPYyC4AnlYqP7BzHEEEA7kERg=",
+      "linux_amd64": "sha256-epLhYke+pOXYl1hPQ/xVRxLthyPRNoYCm7N+xKKMZiY=",
+      "apple_universal": "sha256-/UD4P4HOcejLzOZPzaAsOcPEnFA6dMH32ythJh2PjqA="
+    }
+  }
+}
