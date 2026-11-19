@@ -4,10 +4,10 @@
   version = "9.36.2";
   x86_64-linux = {
     url = "https://electron-dl.todoist.net/linux/Todoist-linux-9.36.2-x86_64-latest.AppImage";
-    hash = "sha256-sDQ0dzbMQKkYzAWAb6h/vVx3TkBtNJxR+v1scmwHZp4=";
+    hash = "sha256-KI6b0nX/b/Nuo7iv81hcjjBpFVDCc6K/BW3AKbCKTHs=";
   };
-  aarch64-linux = {
-    url = "https://electron-dl.todoist.net/linux/Todoist-linux-9.36.2-arm64-latest.AppImage";
-    hash = "sha256-6/GvQmKXNeYXZ/zAtnVQ5B4lXiuNTPE51iwuA+wmL1Q=";
-  };
+  # aarch64-linux = {
+  #   url = "https://electron-dl.todoist.net/linux/Todoist-linux-9.36.2-arm64-latest.AppImage";
+  #   hash = "sha256-6/GvQmKXNeYXZ/zAtnVQ5B4lXiuNTPE51iwuA+wmL1Q=";
+  # };
 }
