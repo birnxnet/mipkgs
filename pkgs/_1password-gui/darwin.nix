@@ -7,7 +7,6 @@
   unzip,
   undmg,
 }:
-
 stdenv.mkDerivation {
   inherit
     pname

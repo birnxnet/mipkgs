@@ -5,10 +5,8 @@
   fetchurl,
   lib,
   # This is only relevant for Linux, so we need to pass it through
-  polkitPolicyOwners ? [ ],
-}:
-
-let
+  polkitPolicyOwners ? [],
+}: let
   pname = "1password";
 
   hostOs = stdenv.hostPlatform.parsed.kernel.name;
@@ -28,7 +26,7 @@ let
   meta = {
     description = "Multi-platform password manager";
     homepage = "https://1password.com/";
-    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
     license = lib.licenses.unfree;
     maintainers = with lib.maintainers; [
       khaneliman
@@ -44,24 +42,24 @@ let
     ];
     mainProgram = "1password";
   };
-
 in
-if stdenv.hostPlatform.isDarwin then
-  callPackage ./darwin.nix {
-    inherit
-      pname
-      version
-      src
-      meta
-      ;
-  }
-else
-  callPackage ./linux.nix {
-    inherit
-      pname
-      version
-      src
-      meta
-      polkitPolicyOwners
-      ;
-  }
+  if stdenv.hostPlatform.isDarwin
+  then
+    callPackage ./darwin.nix {
+      inherit
+        pname
+        version
+        src
+        meta
+        ;
+    }
+  else
+    callPackage ./linux.nix {
+      inherit
+        pname
+        version
+        src
+        meta
+        polkitPolicyOwners
+        ;
+    }
