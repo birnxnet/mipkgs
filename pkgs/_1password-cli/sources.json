@@ -1,20 +1,20 @@
 {
   "stable": {
-    "version": "2.41.1",
+    "version": "2.42.0",
     "hashes": {
-      "linux_arm64": "sha256-jN6yWqbeNDs70Bu5dTUtZzx81Dghe1QP2HDDTrQ7URA=",
-      "linux_386": "sha256-IzVxEagIoiJrbXCAcvwJhh5rjCLBgsGOdvHd6/hM/70=",
-      "linux_amd64": "sha256-8vzb3VEV3LUbY+W5nrDnk/ZqEP5sZ27BC29IAWpISsc=",
-      "apple_universal": "sha256-8UfSuRG7QvHjdEINMYbmUTzjkhna2KzB2ZzAAffcqoI="
+      "linux_arm64": "sha256-h6sqoglGsuOo10Mm78SRqHkF9wOqaZWuGoqeKPo/MLw=",
+      "linux_386": "sha256-C8aPVnFBR5TwtJNFCzXshMg5yqLF40KlJ/vuXgGaBW0=",
+      "linux_amd64": "sha256-RDKl3j74wA4PHjQdXWXfesAVL/C8Vuv9bkfeYCGfGEA=",
+      "apple_universal": "sha256-gGfcsNLfn2B57i6BXv744fkXpcS18SOtEbPtlK7JGfk="
     }
   },
   "beta": {
-    "version": "2.43.0-beta.02",
+    "version": "2.44.0-beta.02",
     "hashes": {
-      "linux_arm64": "sha256-rqvDCUCsYz6T6pA5cxCrjO58y5Shyhec/ouQDROBt+A=",
-      "linux_386": "sha256-37EEUGMmf3V2VGcmEAZPYyC4AnlYqP7BzHEEEA7kERg=",
-      "linux_amd64": "sha256-epLhYke+pOXYl1hPQ/xVRxLthyPRNoYCm7N+xKKMZiY=",
-      "apple_universal": "sha256-/UD4P4HOcejLzOZPzaAsOcPEnFA6dMH32ythJh2PjqA="
+      "linux_arm64": "sha256-fJO5xTe3Irme60ApyxRV+PSEyxM3BN7KCQ44WUTM+Dg=",
+      "linux_386": "sha256-HmMEhJif6u9MWGrpJn1PUik3AJ01nBgZLqiJyGfz9WU=",
+      "linux_amd64": "sha256-tidkiDFROrAuRBcs2d6Fe10pY4vZQ8AHTZ6MZsyRTGs=",
+      "apple_universal": "sha256-nRMcFPjg3sgdbYu8pjSTHuzHZw4qUQfOG9OUszVyTOA="
     }
   }
 }
