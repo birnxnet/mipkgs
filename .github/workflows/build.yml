@@ -72,5 +72,5 @@ jobs:
 
     uses: ./.github/workflows/nix.yml
     with:
-      command: set -o pipefail; nix build -L .#${{ matrix.package }} --accept-flake-config --print-out-paths | xargs cachix push linuxmobile
+      command: nix build -L .#${{ matrix.package }} --accept-flake-config
     secrets: inherit

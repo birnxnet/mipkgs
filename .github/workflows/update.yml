@@ -1,0 +1,53 @@
+name: Update packages
+
+# Nightly: bump flake inputs and every package in pkgs/ to the latest upstream
+# version. Each bump is built before it is committed; failures are reverted and
+# reported (the job goes red) without blocking the other packages.
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily, 04:17 UTC
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "Space-separated package names (empty = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-packages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # raises GitHub API rate limits for nix-update
+          PACKAGES: ${{ inputs.packages }}
+        run: |
+          # shellcheck disable=SC2086 # PACKAGES is intentionally word-split
+          nix shell --inputs-from . nixpkgs#nix-update -c \
+            scripts/update-all.sh --lock $PACKAGES
+
+      - name: Push successful updates
+        if: always()
+        run: |
+          if [ -n "$(git log "origin/$GITHUB_REF_NAME..HEAD" --oneline)" ]; then
+            git log "origin/$GITHUB_REF_NAME..HEAD" --oneline
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          else
+            echo "nothing to push"
+          fi
